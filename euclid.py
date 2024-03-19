@@ -1,9 +1,7 @@
-a = input("a の値を入力")
-b = input("b の値を入力")
+a = int(input("a の値を入力: "))
+b = int(input("b の値を入力: "))
 
 # TODO
-a = int(a)
-b = int(b)
 def euclid(a, b):
     if a < b:
         a, b = b, a
@@ -16,3 +14,13 @@ def euclid(a, b):
         return euclid(b, remain)
 
 print(euclid(a, b)) 
+
+def is_mutually_prime(a, b):
+    gcm = euclid(a, b)
+
+    if gcm == 1:
+        return True
+    else:
+        return False
+    
+print(is_mutually_prime(a, b))
